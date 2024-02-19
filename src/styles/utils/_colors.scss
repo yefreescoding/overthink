@@ -1,17 +1,17 @@
 :root {
-  --clr-bgk: hsl(264, 17%, 11%);
-  --clr-cards: hsl(265, 13%, 15%);
+  --clr-bgk: hsl(264, 17%, 5%);
+  --clr-cards: hsl(265, 13%, 10%);
   --clr-accent: #30cfd0;
-  --clr-accent-8: hsla(180, 63%, 50%, 0.5);
-  --clr-text: #f0eeee;
+  --clr-accent-8: hsl(0, 0%, 30%);
+  --clr-text: hsl(0, 6%, 90%);
 }
 
 :root.dark {
   --clr-bgk: hsl(0, 0%, 90%);
   --clr-cards: hsl(0, 0%, 95%);
-  --clr-accent: hsl(180, 63%, 50%);
-  --clr-accent-8: hsla(266, 63%, 66%, 0.5);
-  --clr-text: hsl(0, 6%, 14%);
+  --clr-accent: hsl(212, 95%, 49%);
+  --clr-accent-8: hsl(268, 28%, 75%);
+  --clr-text: hsl(0, 6%, 35%);
 }
 
 body {

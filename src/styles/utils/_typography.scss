@@ -12,6 +12,7 @@ h3,
 h4 {
   font-family: "Playfair Display", serif;
   font-optical-sizing: auto;
+  font-weight: 900;
 }
 
 h1 {
@@ -20,10 +21,10 @@ h1 {
   font-weight: 800;
 }
 h2 {
-  font-size: clamp(1.2rem, 1.5vw, 1.75rem);
+  font-size: clamp(1.2rem, 1.88vw, 1.75rem);
 }
 h3 {
-  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-size: clamp(1.3rem, 1.5vw, 1.55rem);
 }
 p,
 span,

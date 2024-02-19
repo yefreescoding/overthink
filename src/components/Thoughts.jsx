@@ -1,5 +1,7 @@
 // Library imports
 import { CloudIcon } from "@heroicons/react/24/solid";
+import { MdKeyboardCommandKey } from "react-icons/md";
+import { TbMessage } from "react-icons/tb";
 
 // function imports
 import calculateTimeAgo from "../functions/calculateTimeSubmitted";
@@ -14,7 +16,13 @@ const Thoughts = () => {
       {thoughts.length > 0 ? (
         <h2 className="thoughts__h2">My thoughts</h2>
       ) : (
-        <h2 className="thoughts__h2">Start writing...</h2>
+        <h2 className="thoughts__h2">
+          <div className="command_key">
+            <MdKeyboardCommandKey />
+            <span>k</span>
+          </div>
+          <span> Start writing...</span>
+        </h2>
       )}
       <ul className="thoughts__ul" aria-label="List of thoughts">
         {thoughts
@@ -27,15 +35,15 @@ const Thoughts = () => {
             >
               <div className="thoughts__li_header">
                 <div className="thoughts__li_date_user">
-                  <h3>{thought.id}</h3>
+                  <h3>{thought.user}</h3>
                   <p>{calculateTimeAgo(thought.timeSubmitted)} ago</p>
                 </div>
-                <CloudIcon className="icons icon-1 icon-2" />
+                <TbMessage className="icons medium" />
               </div>
-              <p className="thoughts__p"> &quot; {thought.name} &quot;</p>
+              <p className="thoughts__p"> {thought.name}</p>
               <div className="thoughts__li_footer">
                 <img src={thought.avatar} alt={`Avatar of ${thought.user}`} />
-                <p>{thought.id}</p>
+                <p>{thought.user ? thought.user : "si"}</p>
               </div>
             </li>
           ))}

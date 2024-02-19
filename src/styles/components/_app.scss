@@ -28,7 +28,7 @@
 
 .main {
   min-height: 100dvh;
-  width: min(100% - 1rem, 90em);
+  width: min(100% - 1rem, 80em);
   margin: 0 auto;
   padding: 2rem;
   flex-direction: column;
@@ -82,6 +82,7 @@
   }
   &__h1 {
     text-align: center;
+    text-transform: uppercase;
   }
 }
 

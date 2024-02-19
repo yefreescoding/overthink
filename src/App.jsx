@@ -24,7 +24,7 @@ function App() {
       <div className="wrapper">
         <main className="main" aria-label="Main content of the app">
           <header className="main__header">
-            <div className="main__logo" aria-label="Logo of the site">
+            <div className="nada" aria-label="Logo of the site">
               <CloudIcon className="icons medium" />
             </div>
             <nav className="main__nav">
@@ -33,7 +33,7 @@ function App() {
             </nav>
           </header>
           <section className="main__body">
-            <h1 className="main__h1">Overthink</h1>
+            <h1 className="main__h1">OVERTHINK</h1>
             {formIsOpen && <Form onClick={handleForm} />}
             <Thoughts />
           </section>
