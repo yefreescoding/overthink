@@ -8,7 +8,7 @@ const AppReducer = (state, action) => {
   switch (action.type) {
     case "ADD_THOUGHT":
       const newThoughts = [...state.thoughts, action.payload];
-      // localStorage.setItem("thoughts", JSON.stringify(newThoughts)); // Save to localStorage
+      localStorage.setItem("thoughts", JSON.stringify(newThoughts)); // Save to localStorage
       return {
         ...state,
         thoughts: newThoughts,

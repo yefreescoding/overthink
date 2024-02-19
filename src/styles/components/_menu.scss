@@ -23,20 +23,18 @@
     height: fit-content;
     flex-direction: column;
     border: 1px solid var(--clr-accent-8);
-    background-color: var(--clr-bgk);
+    background-color: var(--clr-cards);
     transform: translateY(-150%);
     transition: all 240ms ease-in-out;
     overflow: hidden;
     opacity: 0;
     min-width: 100%;
     min-height: 100%;
-    // font-size: 2px;
     &.open {
       opacity: 1;
       min-width: 15em;
-      height: 14em;
+      height: fit-content;
       transform: translateY(0px);
-      // font-size: 1rem;
     }
   }
   &__btn {

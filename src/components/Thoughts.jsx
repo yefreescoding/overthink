@@ -37,7 +37,7 @@ const Thoughts = () => {
               <div className="thoughts__li_header">
                 <div className="thoughts__li_date_user">
                   <h3>{thought.user}</h3>
-                  <p>{calculateTimeAgo(thought.timeSubmitted)} ago</p>
+                  <p>{calculateTimeAgo(thought.timeSubmitted)}</p>
                 </div>
                 <TbMessage className="icons medium" />
               </div>
