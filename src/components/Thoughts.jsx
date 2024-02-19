@@ -34,7 +34,7 @@ const Thoughts = () => {
               </div>
               <p className="thoughts__p"> &quot; {thought.name} &quot;</p>
               <div className="thoughts__li_footer">
-                <img src={thought.id} alt={`Avatar of ${thought.user}`} />
+                <img src={thought.avatar} alt={`Avatar of ${thought.user}`} />
                 <p>{thought.id}</p>
               </div>
             </li>

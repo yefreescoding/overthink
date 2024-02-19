@@ -15,6 +15,7 @@ export default function Form({ onClick }) {
     const newThought = {
       id: uuidv4(),
       timeSubmitted: Date.now(),
+      avatar: "./public/avatars/avatar-test.jpeg",
       name: textThought,
       blur: true,
       delete: false,
