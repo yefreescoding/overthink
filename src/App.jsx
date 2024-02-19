@@ -1,5 +1,5 @@
 // React imports
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 // component imports
 import Menu from "./components/Menu";
@@ -18,6 +18,28 @@ function App() {
   const handleForm = () => {
     setFormIsOPen(!formIsOpen);
   };
+
+  // Event listener callback function
+  const handleKeyDown = (event) => {
+    // Check if the meta key (Command key on Mac, Windows key on Windows) and the letter 'k' are pressed
+    if (event.metaKey && event.key === "k") {
+      setFormIsOPen(true);
+    }
+
+    if (event.key === "Escape") {
+      setFormIsOPen(false);
+    }
+  };
+
+  // Add event listener when component mounts
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Remove event listener when component unmounts
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <AppProvider>

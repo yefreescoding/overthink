@@ -20,6 +20,9 @@
       border-radius: 6px;
       border: 1px solid var(--clr-accent-8);
       background-color: var(--clr-bgk);
+      @media (width < 50em) {
+        display: none;
+      }
     }
   }
 
@@ -38,7 +41,6 @@
   &__li {
     --card-padding: 1rem;
     width: min(100%, 25em);
-    // width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
