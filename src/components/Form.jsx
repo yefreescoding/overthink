@@ -1,6 +1,9 @@
 /* eslint-disable react/prop-types */
 // library imports
 import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
+import { IoEnterOutline } from "react-icons/io5";
+import { BsArrowReturnLeft } from "react-icons/bs";
+
 import { useContext, useState } from "react";
 import { AppContext } from "../context/AppContext";
 import { v4 as uuidv4 } from "uuid";
@@ -15,7 +18,7 @@ export default function Form({ onClick }) {
     const newThought = {
       id: uuidv4(),
       timeSubmitted: Date.now(),
-      user: "Fulano De Tal",
+      user: "Yefree V.",
       avatar: "./public/avatars/avatar-test.jpg",
       name: textThought,
       blur: true,
@@ -38,44 +41,38 @@ export default function Form({ onClick }) {
   //   }
   // };
   return (
-    <>
-      <form className="form" onSubmit={handleSubmit} autoComplete="off">
-        <label
-          className="form__label"
-          htmlFor="thoughts"
+    <form className="form" onSubmit={handleSubmit} autoComplete="off">
+      <label className="form__label" htmlFor="thoughts" data-focused={focused}>
+        <div className="form__input_submit">
+          <input
+            className="form__input"
+            type="text"
+            name="thought"
+            autoFocus
+            required
+            maxLength={60}
+            value={textThought}
+            onChange={(e) => setTextThought(e.target.value)}
+            onFocus={() => setFocused(true)}
+            onBlur={() => setFocused(false)}
+            placeholder="What's on your mind?"
+          />
+          <button
+            className="form__submit"
+            aria-label="Enter new thought"
+            type="submit"
+          >
+            <BsArrowReturnLeft className="icons large" />
+          </button>
+        </div>
+        <button
+          className="form__cancel"
+          onClick={onClick}
           data-focused={focused}
         >
-          <div className="form__input_submit">
-            <input
-              className="form__input"
-              type="text"
-              name="thought"
-              autoFocus
-              required
-              maxLength={60}
-              value={textThought}
-              onChange={(e) => setTextThought(e.target.value)}
-              onFocus={() => setFocused(true)}
-              onBlur={() => setFocused(false)}
-              placeholder="What's on your mind?"
-            />
-            <button
-              className="form__submit"
-              aria-label="Enter new thought"
-              type="submit"
-            >
-              <CloudArrowUpIcon className="icons large" />
-            </button>
-          </div>
-          <button
-            className="form__cancel"
-            onClick={onClick}
-            data-focused={focused}
-          >
-            Cancel
-          </button>
-        </label>
-      </form>
-    </>
+          Cancel (esc)
+        </button>
+      </label>
+    </form>
   );
 }

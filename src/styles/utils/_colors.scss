@@ -1,4 +1,4 @@
-:root {
+:root.dark {
   --clr-bgk: hsl(264, 17%, 5%);
   --clr-cards: hsl(265, 13%, 10%);
   --clr-accent: #30cfd0;
@@ -6,12 +6,12 @@
   --clr-text: hsl(0, 6%, 80%);
 }
 
-:root.dark {
+:root {
   --clr-bgk: hsl(0, 0%, 90%);
   --clr-cards: hsl(0, 0%, 95%);
   --clr-accent: hsl(212, 95%, 49%);
   --clr-accent-8: hsl(268, 28%, 75%);
-  --clr-text: hsl(0, 6%, 35%);
+  --clr-text: hsl(0, 6%, 30%);
 }
 
 body {

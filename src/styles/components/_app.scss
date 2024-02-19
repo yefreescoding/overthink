@@ -1,7 +1,7 @@
 .wrapper {
   position: relative;
   background-color: var(--clr-bgk);
-  overflow-x: hidden;
+  // overflow-x: hidden;
   isolation: isolate;
   &::after,
   &::before {
@@ -86,34 +86,34 @@
   }
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
+// @keyframes float {
+//   0% {
+//     transform: translateY(0);
+//   }
 
-  50% {
-    transform: translateY(8px);
-  }
+//   50% {
+//     transform: translateY(8px);
+//   }
 
-  100% {
-    transform: translateY(0px);
-  }
-}
+//   100% {
+//     transform: translateY(0px);
+//   }
+// }
 
-@keyframes wave {
-  0% {
-    transform: translateX(0) translateY(0);
-  }
-  50% {
-    transform: translateX(50px) translateY(50px);
-  }
-  100% {
-    transform: translateX(0) translateY(0);
-  }
-}
+// @keyframes wave {
+//   0% {
+//     transform: translateX(0) translateY(0);
+//   }
+//   50% {
+//     transform: translateX(50px) translateY(50px);
+//   }
+//   100% {
+//     transform: translateX(0) translateY(0);
+//   }
+// }
 
-@keyframes textClip {
-  to {
-    background-position: 200% center;
-  }
-}
+// @keyframes textClip {
+//   to {
+//     background-position: 200% center;
+//   }
+// }

@@ -30,12 +30,15 @@
     --column-size: 20em;
     list-style: none;
     display: grid;
-    place-items: center;
+    align-items: start;
+    justify-content: center;
+    // place-items: center;
     gap: 1rem;
     grid-template-columns: repeat(
       auto-fit,
       minmax(min(100%, var(--column-size)), 1fr)
     );
+    grid-auto-rows: min-content;
   }
 
   &__li {
@@ -57,7 +60,7 @@
       border-bottom: 1px solid var(--clr-accent-8);
       padding: var(--card-padding);
       h3 {
-        margin-bottom: 0.75rem;
+        margin-bottom: 0.5rem;
       }
     }
 
