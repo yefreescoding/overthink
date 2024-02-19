@@ -1,6 +1,13 @@
 .menu {
   position: relative;
   transition: all 240ms;
+
+  > button {
+    cursor: pointer;
+    background-color: transparent;
+    color: var(--clr-text);
+    border: 1px solid transparent;
+  }
   &__actions,
   &__btn {
     display: flex;
@@ -15,27 +22,34 @@
     right: 0.2rem;
     height: fit-content;
     flex-direction: column;
-    border: 1px solid var(--clr-accent);
+    border: 1px solid var(--clr-accent-8);
     background-color: var(--clr-bgk);
     transform: translateY(-150%);
-    transition: all 350ms ease-in-out;
+    transition: all 240ms ease-in-out;
     overflow: hidden;
     opacity: 0;
     min-width: 100%;
     min-height: 100%;
+    // font-size: 2px;
     &.open {
       opacity: 1;
       min-width: 15em;
-      height: fit-content;
+      height: 14em;
       transform: translateY(0px);
+      // font-size: 1rem;
     }
   }
   &__btn {
+    cursor: pointer;
+    font-family: var(--regular-font);
+    color: var(--clr-text);
+    border: 1px solid transparent;
+    background-color: transparent;
     align-items: center;
     justify-content: space-between;
     transition: all 250ms;
     &:hover {
-      background-color: var(--clr-cards);
+      background-color: var(--clr-accent-8);
     }
   }
 

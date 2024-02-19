@@ -50,7 +50,6 @@ function App() {
               <CloudIcon className="icons medium" />
             </div>
             <nav className="main__nav">
-              <small>Use the menu to add and delete your thoughts</small>
               <Menu openForm={handleForm} />
             </nav>
           </header>

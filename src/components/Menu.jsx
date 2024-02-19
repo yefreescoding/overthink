@@ -1,7 +1,7 @@
 /* eslint-disable react/react-in-jsx-scope */
 /* eslint-disable react/prop-types */
 // react imports
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 
 // library imports
 import { TrashIcon } from "@heroicons/react/24/solid";
@@ -35,6 +35,28 @@ function Menu({ openForm }) {
       type: "DELETE_THOUGHTS",
     });
   };
+
+  // Event listener callback function
+  const handleKeyDown = (event) => {
+    // Check if the meta key (Command key on Mac, Windows key on Windows) and the letter 'k' are pressed
+    // if (event.key === "e") {
+    //   eraseThoughts();
+    // }
+    // Gotta learn how to activate this thing without messing the code
+    // if (event.key === "Escape") {
+    //   setFormIsOPen(false);
+    // }
+  };
+
+  // Add event listener when component mounts
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+
+    // Remove event listener when component unmounts
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   return (
     <div className="menu">
