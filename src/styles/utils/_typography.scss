@@ -21,14 +21,12 @@ h1 {
   font-weight: 800;
 }
 h2 {
-  font-size: clamp(1.2rem, 1.88vw, 1.75rem);
+  font-size: clamp(1.4rem, 1.75vw, 1.8rem);
 }
 h3 {
-  font-size: clamp(1.3rem, 1.5vw, 1.55rem);
+  font-size: clamp(1.1rem, 1.25vw, 1.5rem);
 }
-p,
-span,
-a {
+p {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-style: normal;

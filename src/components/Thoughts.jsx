@@ -17,11 +17,11 @@ const Thoughts = () => {
         <h2 className="thoughts__h2">My thoughts</h2>
       ) : (
         <h2 className="thoughts__h2">
+          <span> Start writing...</span>
           <div className="command_key">
             <MdKeyboardCommandKey />
             <span>k</span>
           </div>
-          <span> Start writing...</span>
         </h2>
       )}
       <ul className="thoughts__ul" aria-label="List of thoughts">
@@ -38,7 +38,7 @@ const Thoughts = () => {
                   <h3>{thought.user}</h3>
                   <p>{calculateTimeAgo(thought.timeSubmitted)} ago</p>
                 </div>
-                <TbMessage className="icons medium" />
+                <TbMessage className="icons big" />
               </div>
               <p className="thoughts__p"> {thought.name}</p>
               <div className="thoughts__li_footer">
