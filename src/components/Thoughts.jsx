@@ -1,10 +1,11 @@
 // Library imports
-import { CloudIcon } from "@heroicons/react/24/solid";
 import { MdKeyboardCommandKey } from "react-icons/md";
 import { TbMessage } from "react-icons/tb";
 
 // function imports
 import calculateTimeAgo from "../functions/calculateTimeSubmitted";
+
+// react imports
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
 
@@ -17,9 +18,9 @@ const Thoughts = () => {
         <h2 className="thoughts__h2">My thoughts</h2>
       ) : (
         <h2 className="thoughts__h2">
-          <span> Start writing...</span>
+          <span> Start writing</span>
           <div className="command_key">
-            <MdKeyboardCommandKey />
+            <MdKeyboardCommandKey className="icons medium" />
             <span>k</span>
           </div>
         </h2>
@@ -38,7 +39,7 @@ const Thoughts = () => {
                   <h3>{thought.user}</h3>
                   <p>{calculateTimeAgo(thought.timeSubmitted)} ago</p>
                 </div>
-                <TbMessage className="icons big" />
+                <TbMessage className="icons medium" />
               </div>
               <p className="thoughts__p"> {thought.name}</p>
               <div className="thoughts__li_footer">
