@@ -4,16 +4,24 @@
   --clr-accent: #30cfd0;
   --clr-accent-8: hsl(0, 0%, 30%);
   --clr-text: hsl(0, 6%, 80%);
+  --clr-bgk-after: #30cfd0;
+  --clr-bgk-before: #330867;
 }
 
 :root {
-  --clr-bgk: hsl(0, 0%, 90%);
-  --clr-cards: hsl(0, 0%, 95%);
+  --clr-bgk: hsl(0, 0%, 93%);
+  --clr-cards: hsl(0, 0%, 98%);
   --clr-accent: hsl(212, 95%, 49%);
   --clr-accent-8: hsl(268, 28%, 75%);
   --clr-text: hsl(0, 6%, 30%);
+  --clr-bgk-after: #fbc2eb;
+  --clr-bgk-before: #a6c1ee;
 }
 
 body {
   background-color: var(--clr-bgk);
+}
+
+.esto {
+  background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }

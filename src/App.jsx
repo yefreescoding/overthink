@@ -50,6 +50,12 @@ function App() {
               <CloudIcon className="icons medium" />
             </div>
             <nav className="main__nav">
+              <p>
+                {new Date().toLocaleString(undefined, {
+                  month: "long",
+                  day: "numeric",
+                })}
+              </p>
               <Menu openForm={handleForm} />
             </nav>
           </header>
