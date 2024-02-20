@@ -17,7 +17,7 @@ export default function Form({ onClick }) {
       id: uuidv4(),
       timeSubmitted: Date.now(),
       user: "Veronika Varapalo.",
-      avatar: "avatars/avatar-test-2.jpg",
+      avatar: "/avatars/avatar-test-2.jpg",
       name: textThought,
       blur: true,
       delete: false,
