@@ -14,17 +14,17 @@ const Thoughts = () => {
 
   return (
     <section className="thoughts">
-      {thoughts.length > 0 ? (
-        <h2 className="thoughts__h2">My thoughts</h2>
-      ) : (
-        <h2 className="thoughts__h2">
+      <h2 className="thoughts__h2">
+        {thoughts.length > 0 ? (
+          <span> My thoughts </span>
+        ) : (
           <span> Start writing</span>
-          <div className="command_key">
-            <MdKeyboardCommandKey className="icons medium" />
-            <span>k</span>
-          </div>
-        </h2>
-      )}
+        )}
+        <div className="command_key">
+          <MdKeyboardCommandKey className="icons medium" />
+          <span>k</span>
+        </div>
+      </h2>
       <ul className="thoughts__ul" aria-label="List of thoughts">
         {thoughts
           .sort((a, b) => b.timeSubmitted - a.timeSubmitted)
@@ -36,7 +36,7 @@ const Thoughts = () => {
             >
               <div className="thoughts__li_header">
                 <div className="thoughts__li_date_user">
-                  <h3>{thought.user}</h3>
+                  <h3>Posted on:</h3>
                   <p>{calculateTimeAgo(thought.timeSubmitted)}</p>
                 </div>
                 <TbMessage className="icons medium" />

@@ -1,7 +1,5 @@
 /* eslint-disable react/prop-types */
 // library imports
-import { CloudArrowUpIcon } from "@heroicons/react/24/solid";
-import { IoEnterOutline } from "react-icons/io5";
 import { BsArrowReturnLeft } from "react-icons/bs";
 
 import { useContext, useState } from "react";
@@ -18,8 +16,8 @@ export default function Form({ onClick }) {
     const newThought = {
       id: uuidv4(),
       timeSubmitted: Date.now(),
-      user: "Yefree V.",
-      avatar: "./public/avatars/avatar-test.jpg",
+      user: "Veronika Varapalo.",
+      avatar: "avatars/avatar-test-2.jpg",
       name: textThought,
       blur: true,
       delete: false,

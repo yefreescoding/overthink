@@ -29,28 +29,6 @@ function Menu({ openForm }) {
     });
   };
 
-  // Event listener callback function
-  const handleKeyDown = (event) => {
-    // Check if the meta key (Command key on Mac, Windows key on Windows) and the letter 'k' are pressed
-    // if (event.key === "e") {
-    //   eraseThoughts();
-    // }
-    // Gotta learn how to activate this thing without messing the code
-    // if (event.key === "Escape") {
-    //   setFormIsOPen(false);
-    // }
-  };
-
-  // Add event listener when component mounts
-  useEffect(() => {
-    document.addEventListener("keydown", handleKeyDown);
-
-    // Remove event listener when component unmounts
-    return () => {
-      document.removeEventListener("keydown", handleKeyDown);
-    };
-  }, []);
-
   return (
     <div className="menu">
       <button onClick={() => setOpenMenu(!openMenu)} aria-label="Open the menu">
@@ -76,7 +54,10 @@ function Menu({ openForm }) {
           </li>
         </ul>
         <button
-          onClick={openForm}
+          onClick={() => {
+            openForm();
+            setOpenMenu(false);
+          }}
           aria-label="Add new though"
           className="menu__btn"
         >

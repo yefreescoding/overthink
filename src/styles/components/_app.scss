@@ -33,9 +33,9 @@
 
 .main {
   min-height: 100dvh;
-  width: min(100% - 1rem, 80em);
+  width: min(100%, 80em);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 1rem;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
