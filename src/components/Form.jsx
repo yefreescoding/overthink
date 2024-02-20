@@ -31,13 +31,6 @@ export default function Form({ onClick }) {
     setTextThought("");
   };
 
-  // const handleCancel = () => {
-  //   if (focused === false) {
-  //     setFocused(true);
-  //   } else {
-  //     setFocused(false);
-  //   }
-  // };
   return (
     <form className="form" onSubmit={handleSubmit} autoComplete="off">
       <label className="form__label" htmlFor="thoughts" data-focused={focused}>
